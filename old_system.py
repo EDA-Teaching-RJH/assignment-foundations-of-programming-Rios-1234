@@ -25,7 +25,7 @@ def run_system_monolith():
         
         opt = input("Select option: ").strip() # .strip() removes leading/trailing spaces e.g  ("1 ")
         
-        if opt = "1":  
+        if opt == "1":# == asks a question: Is opt equal to "1"? whereas = is setting a value 
             print("Current Crew List:")
             
             for i in range(10):

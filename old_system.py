@@ -66,7 +66,7 @@ def run_system_monolith():
             print("Invalid.")
             
         
-        x = 10
+        x = len(n) #  When you want x to match the size of a list/string/etc. not just a value.
         if x > 5:
             print("System Check OK")
         else:

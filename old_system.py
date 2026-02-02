@@ -14,6 +14,7 @@ def run_system_monolith():
     loading = 0
     while loading < 5:
         print (f"Loading module {loading}") # You can format numbers, padding, precision, etc., inside the braces:
+        loading += 1 
         
     
     while True:

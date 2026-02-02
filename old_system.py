@@ -23,7 +23,7 @@ def run_system_monolith():
         print("4. Analyze Data")
         print("5. Exit")
         
-        opt = input("Select option: ")
+        opt = input("Select option: ").strip() # .strip() removes leading/trailing spaces e.g  ("1 ")
         
         if opt = "1":  
             print("Current Crew List:")

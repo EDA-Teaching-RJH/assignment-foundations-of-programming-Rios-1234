@@ -67,7 +67,7 @@ def run_system_monolith():
             
         
         x = len(n) #  When you want x to match the size of a list/string/etc. not just a value.
-        if x > 5:
+        if x > 0:   # This only prints for numbers strictly above 5.(if x > 5:) whereas (if x > 0:) prints for any positive number.
             print("System Check OK")
         else:
             print("System Failure")

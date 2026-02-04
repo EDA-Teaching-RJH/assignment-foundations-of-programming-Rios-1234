@@ -30,7 +30,7 @@ def run_system_monolith():
         if opt == "1":# == asks a question: Is opt equal to "1"? whereas = is setting a value 
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
@@ -56,7 +56,7 @@ def run_system_monolith():
             count = 0
             
             for rank in r:
-                if rank == "Captain" or rank == "Commander": 
+                if rank == "Captain" or rank == "Commander":# Fix logical condition for rank comparison
                     count = count + 1
             print("High ranking officers: " + str(count)) # Fix print statement for high ranking officers count
             

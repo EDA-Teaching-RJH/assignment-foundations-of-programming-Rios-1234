@@ -90,4 +90,5 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith
+run_system_monolith()# this result of calling the function instead of just the function itself.
+

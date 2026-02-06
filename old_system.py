@@ -13,7 +13,7 @@ def run_system_monolith():
     loading = 0
     while loading < 5:
         print ("loading module " + str(loading)) # You can format numbers, padding, precision, etc., inside the braces:
-        loading += 1 #this now has stopped the loading loop. as before it was never incremented.
+        loading += 1 #this now has stopped the loading loop. as before it was never incremented.If this line never was inputted,since loading was 0 the loadding would stay 0 forver.
         
     
     while True:
@@ -34,7 +34,7 @@ def run_system_monolith():
                 
         elif opt == "2":
             new_name = input("Name: ")
-            new_rank = input("Rank: ")
+            new_rank = input("Rank: ") 
             new_div = input("Division: ")
             
            
@@ -57,7 +57,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or rank == "Commander":# Fix logical condition for rank comparison
                     count = count + 1
-            print("High ranking officers: " + str(count)) # Fix print statement for high ranking officers count
+            print("High ranking officers: " + str(count)) # Fix print statement for high ranking officers count added str because we only concatenate a string with another strin not int
             
         elif opt == "5":
             print("Shutting down.")

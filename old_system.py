@@ -29,8 +29,8 @@ def run_system_monolith():
         if opt == "1":# == asks a question: Is opt equal to "1"? whereas = is setting a value 
             print("Current Crew List:")
             
-            for i in range(len(n)): #Refactor crew list display and rank analysis
-                print(n[i] + " - " + r[i]) 
+            for i in range(len(n)): #Refactor crew list display and rank analysis 
+                print(f"{n[i]} - {r[i]} - {d[i]} ") #  Using f-string for cleaner formatting of crew member details.
                 
         elif opt == "2":
             new_name = input("Name: ")

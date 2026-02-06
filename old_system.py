@@ -12,7 +12,7 @@ def run_system_monolith():
     
     loading = 0
     while loading < 5:
-        print ("loading module " + str(loading)) # You can format numbers, padding, precision, etc., inside the braces:
+        print ("loading module " + str(loading)) 
         loading += 1 #this now has stopped the loading loop. as before it was never incremented.If this line never was inputted,since loading was 0 the loadding would stay 0 forver.
         
     
@@ -38,12 +38,14 @@ def run_system_monolith():
             new_div = input("Division: ")
             
            
-            n.append(new_name)
+            n.append(new_name) # only had the .append() function for n 
+            r.append(new_rank) # adding append r and d allows the list to stay aligned 
+            d.append(new_div)
             print("Crew member added.")
             
         elif opt == "3":
             rem = input("Name to remove: ")
-           
+         
             idx = n.index(rem)
             n.pop(idx)
             r.pop(idx)

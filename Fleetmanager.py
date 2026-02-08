@@ -17,3 +17,5 @@
   print("8 count officers")
   print("9 exit")
   return input("choice: ")
+
+def add_a_crew_member(name,rank,div,id):

@@ -5,7 +5,8 @@
   ids = [1001, 1002, 1003, 1004, 1005]
   return names,ranks,divs,ids
 
- def display_menu(user): 
+ def display_menu(user):
+  print(f"\n Fleet Manager (User: {user})")
            
    
 

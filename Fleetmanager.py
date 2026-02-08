@@ -4,6 +4,8 @@
   divs =  ["Command", "Command", "Operations", "Operations", "Sciences"]
   ids = [1001, 1002, 1003, 1004, 1005]
   return names,ranks,divs,ids
+
+ def display_menu(user): 
            
    
 

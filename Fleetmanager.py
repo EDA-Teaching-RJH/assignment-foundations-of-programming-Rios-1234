@@ -7,6 +7,13 @@
 
  def display_menu(user):
   print(f"\n Fleet Manager (User: {user})")
-           
-   
-
+  print("1 Add crew memeber")
+  print("2 remove crew member")
+  print("3 update rank")
+  print("4 Dispay roster")
+  print("5 search crew")
+  print("6 Filter by division")
+  print("7 calculate pay roll")
+  print("8 count officers")
+  print("9 exit")
+  return input("choice: ")

@@ -47,7 +47,12 @@ def update_ranks(name,rank,id):
    print()
    for i in range(len(name)):
      if search in name [i].lower():
-          print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
+          print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
    print()
-    
+
+ def display_roster(name,rank,div,id):
+   print("\n-roster-")
+   for i in range(len(name)):
+     print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
+     print()
 

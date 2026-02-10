@@ -33,6 +33,19 @@ def add_a_crew_member(name,rank,div,id):
  else:
   print("Id already exsists")
 
+def remove_memeber(name,rank,div,id):
+  remove id=int(input("reomve id: ")
+  if remove_id in id:
+    index = id.index(remove_id)
+    name.pop.(index)
+    rank.pop(index)
+    div.pop(index)
+    id.pop(index)
+    print("memebr removed")
+else:
+    print("Id not ffound ")
+  
+
 def update_ranks(name,rank,id):
   search_id = int(input("Id update: "))
   if search_id in id:

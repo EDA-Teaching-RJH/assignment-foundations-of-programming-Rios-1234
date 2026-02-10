@@ -41,5 +41,13 @@ def update_ranks(name,rank,id):
     print(" New rank Updated")
   else:
     print("Id not found")
+
+ def search_crew(name,rank,div,id):
+   search=input("look for name: ").lower()
+   print()
+   for i in range(len(name)):
+     if search in name [i].lower():
+          print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
+   print()
     
 

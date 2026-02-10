@@ -55,17 +55,16 @@ def update_ranks(name,rank,id):
   else:
     print("Id not found")
 
- def search_crew(name,rank,div,id):
+def display_roster(name,rank,div,id):
+   print("\n-roster-")
+   for i in range(len(name)):
+     print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
+     print()
+
+def search_crew(name,rank,div,id):
    search=input("look for name: ").lower()
    print()
    for i in range(len(name)):
      if search in name [i].lower():
           print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
    print()
-
- def display_roster(name,rank,div,id):
-   print("\n-roster-")
-   for i in range(len(name)):
-     print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
-     print()
-

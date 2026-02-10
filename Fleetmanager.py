@@ -34,4 +34,12 @@ def add_a_crew_member(name,rank,div,id):
   print("Id already exsists")
 
 def update_ranks(name,rank,id):
+  search_id = int(input("Id update: "))
+  if search_id in id:
+    index = id.index(search_id)
+    rank[index] = input ("New Rank")
+    print(" New rank Updated")
+  else:
+    print("Id not found")
+    
 

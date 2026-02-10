@@ -33,3 +33,5 @@ def add_a_crew_member(name,rank,div,id):
  else:
   print("Id already exsists")
 
+def update_ranks(name,rank,id):
+

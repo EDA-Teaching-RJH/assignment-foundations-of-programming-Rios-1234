@@ -7,7 +7,7 @@ def init_database():
 
 
 def display_menu(user):
-    print(f"\n Fleet Manager (User: {user})")
+    print(f"\n Fleet Manager (User: {user})") #using \n keeps it nice and tidy by creating a new line.
     print("1 Add crew member")
     print("2 Remove crew member")
     print("3 Update rank")
@@ -32,7 +32,7 @@ def add_a_crew_member(names, ranks, divs, ids):
         print("Invalid ID!")
         return
 
-    new_id = int(user_input)
+    new_id = int(user_input) # making sure its a number input
 
     if new_id not in ids:
         names.append(name)
@@ -45,11 +45,14 @@ def add_a_crew_member(names, ranks, divs, ids):
 
 
 def remove_member(names, ranks, divs, ids):
-    try:
-        remove_id = int(input("ID to remove: "))
-    except ValueError:
+    remove_id_str = input("ID to remove: ")
+
+    if not remove_id_str.isdigit(): # isdigit() ensures the input contains only numeric characters.
+
         print("Invalid ID!")
         return
+
+    remove_id = int(remove_id_str)
 
     if remove_id in ids:
         index = ids.index(remove_id)
@@ -60,6 +63,7 @@ def remove_member(names, ranks, divs, ids):
         print("Removed!")
     else:
         print("ID not found!")
+
 
 
 def update_ranks(name,rank,id):

@@ -6,17 +6,17 @@ def init_database():
     return names, ranks, divs, ids
 
 def display_menu(user):
-  print(f"\n Fleet Manager (User: {user})")
-  print("1 Add crew memeber")
-  print("2 remove crew member")
-  print("3 update rank")
-  print("4 Dispay roster")
-  print("5 search crew")
-  print("6 Filter by division")
-  print("7 calculate pay roll")
-  print("8 count officers")
-  print("9 exit")
-  return input("choice: ")
+    print(f"\n Fleet Manager (User: {user})")
+    print("1 Add crew member")
+    print("2 Remove crew member")
+    print("3 Update rank")
+    print("4 Display roster")
+    print("5 Search crew")
+    print("6 Filter by division")
+    print("7 Calculate payroll")
+    print("8 Count officers")
+    print("9 Exit")
+    return input("Choice: ")
  
 def add_a_crew_member(name,rank,div,id):
  name = input("name: ")

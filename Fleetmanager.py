@@ -68,3 +68,13 @@ def search_crew(name,rank,div,id):
      if search in name [i].lower():
           print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
    print()
+def filter_by_diviision(name,div):
+  div=input("science,commanda,operation")
+  print()
+  for name,division in zip(name,div):
+    if division == div:
+      print(name)
+print()
+
+            
+                        

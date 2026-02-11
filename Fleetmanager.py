@@ -25,11 +25,14 @@ def add_a_crew_member(names, ranks, divs, ids):
     rank = input("Rank: ")
     div = input("Division: ")
 
-    try:
-        new_id = int(input("ID: "))
-    except ValueError:
+    user_input = input("ID: ")
+
+    # Check if the ID is a valid integer
+    if not user_input.isdigit():
         print("Invalid ID!")
         return
+
+    new_id = int(user_input)
 
     if new_id not in ids:
         names.append(name)
@@ -99,7 +102,7 @@ def filter_by_division(names, divs):
         print("Invalid division.")
         return
 
-    for name, div in zip(names, divs):
+    for name, div in zip(names, divs): # zip is a good way to cleaning up the code as its good for lopping over two things at the same time
         if div == target:
             print(name)
 
@@ -129,11 +132,11 @@ def main():
     while True:
         choice = display_menu(user)
 
-        if not choice.isdigit():
+        if not choice.isdigit():# isdigit keeps it the correct format e.g a number.
             print("Enter a number from 1–9.")
             continue
 
-        choice = int(choice)
+        choice = int(choice) # this means it has to be a number choice for it to work.
 
         if choice == 1:
             add_a_crew_member(names, ranks, divs, ids)
@@ -148,7 +151,7 @@ def main():
         elif choice == 6:
             filter_by_division(names, divs)
         elif choice == 7:
-            print(f"Total payroll: {calculating_payroll(ranks)} credits\n")
+            print(f"Total payroll: {calculating_payroll(ranks)} britsh pounds\n")
         elif choice == 8:
             print(f"Senior officers: {counting_officers(ranks)}\n")
         elif choice == 9:

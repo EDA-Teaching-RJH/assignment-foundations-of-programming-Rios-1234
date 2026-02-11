@@ -76,5 +76,25 @@ def filter_by_diviision(name,div):
       print(name)
 print()
 
+def calculating_payroll
+    pay={
+      "captin":1000,
+      "cadet":500,
+      "lieutenant comander":800,
+      "lieutenant":750
+      "comander":900
+    }
+    return sum(pay.get(rank,0) for rank in ranks)
+
+def counting_officers(ranks)
+ return sum(rank in {"captin", "commander"} for rank in ranks
+
+
+
+
+          
+            
+
+      
             
                         

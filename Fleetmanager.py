@@ -80,23 +80,36 @@ def search_crew(name,rank,div,id):
           print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
    print()
   
-def filter_by_diviision(name,div):
-  div=input("science,commanda,operation")
-  print()
-  for name,division in zip(name,div):
-    if division == div:
-      print(name)
-print()
+def filter_by_division(names, divs):
+    division = input("Enter division (Command / Operations / Sciences): ").strip().lower()
+    print()
+
+    if division == "command":# what the user could type
+        target = "Command" # this is the correct version stored in the list
+    elif division == "operations":
+        target = "Operations"
+    elif division == "sciences":
+        target = "Sciences" # target allows me to convert a bad input into the correctt format
+    else:
+        print("Invalid division.")
+        return
+
+    for name, div in zip(names, divs):
+        if div == target:
+            print(name)
+
+    print()
+
 
 def calculating_payroll(ranks):
-    pay={
-      "captin":1000,
-      "cadet":500,
-      "lieutenant comander":800,
-      "lieutenant":750,
-      "comander":900
+    pay = {
+        "Captain": 1000,
+        "Cadet": 500,
+        "Lieutenant Commander": 800,
+        "Lieutenant": 750,
+        "Commander": 900
     }
-    return sum(pay.get(rank,0) for rank in ranks)
+    return sum(pay.get(rank, 0) for rank in ranks)
 
 def counting_officers(ranks):
     return sum(rank in {"Captain", "Commander"} for rank in ranks)

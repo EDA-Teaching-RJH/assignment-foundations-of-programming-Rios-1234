@@ -18,20 +18,25 @@ def display_menu(user):
     print("9 Exit")
     return input("Choice: ")
  
-def add_a_crew_member(name,rank,div,id):
- name = input("name: ")
- rank = input("rank: ") 
- div = input("division: ")
- new_id = int(input("ID: "))
+ef add_a_crew_member(names, ranks, divs, ids):
+    name = input("Name: ")
+    rank = input("Rank: ")
+    div = input("Division: ")
 
- if new_ID not in ids:
-  names.append(name)
-  rank.append(rank)
-  div.append(div)
-  id.appends(new_id)
-  print("added")
- else:
-  print("Id already exsists")
+    try:
+        new_id = int(input("ID: "))
+    except ValueError:
+        print("Invalid ID!")
+        return
+
+    if new_id not in ids:
+        names.append(name)
+        ranks.append(rank)
+        divs.append(div)
+        ids.append(new_id)
+        print("Successfully added!")
+    else:
+        print("ID already exists!")
 
 def remove_member(names, ranks, divs, ids):
     remove_id = int(input("ID to remove: "))

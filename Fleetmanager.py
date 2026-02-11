@@ -23,11 +23,13 @@ def add_a_crew_member(names, ranks, divs, ids):
     rank = input("Rank: ")
     div = input("Division: ")
 
-    try:
-        new_id = int(input("ID: "))
-    except ValueError:
+    user_input = input("ID: ")
+
+    if not user_input.isdigit(): # this keeps the correct formatt.e.g a number
         print("Invalid ID!")
         return
+
+    new_id = int(user_input)
 
     if new_id not in ids:
         names.append(name)
@@ -38,12 +40,15 @@ def add_a_crew_member(names, ranks, divs, ids):
     else:
         print("ID already exists!")
 
-def remove_member(names, ranks, divs, ids):
-    try:
-        remove_id = int(input("ID to remove: "))
-    except ValueError:
+
+ef remove_member(names, ranks, divs, ids):
+    user_input = input("ID to remove: ")
+
+    if not user_input.isdigit():
         print("Invalid ID!")
         return
+
+    remove_id = int(user_input)
 
     if remove_id in ids:
         index = ids.index(remove_id)
@@ -66,19 +71,19 @@ def update_ranks(name,rank,id):
   else:
     print("Id not found")
 
-def display_roster(name,rank,div,id):
-   print("\n-roster-")
-   for i in range(len(name)):
-     print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
-     print()
+def display_roster(names, ranks, divs, ids):
+    print("\n--- Roster ")
+    for i in range(len(names)):
+        print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
+    print()
 
-def search_crew(name,rank,div,id):
-   search=input("look for name: ").lower()
-   print()
-   for i in range(len(name)):
-     if search in name [i].lower():
-          print(f"{id[i]} | {name[i]} | {rank[i]} | {div[i]}")
-   print()
+def search_crew(names, ranks, divs, ids):
+    search = input("Look for name: ").lower()
+    print()
+    for i in range(len(names)):
+        if search in names[i].lower():
+            print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
+    print()
   
 def filter_by_division(names, divs):
     division = input("Enter division (Command / Operations / Sciences): ").strip().lower()

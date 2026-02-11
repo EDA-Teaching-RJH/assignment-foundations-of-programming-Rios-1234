@@ -5,6 +5,7 @@ def init_database():
     ids = [1001, 1002, 1003, 1004, 1005]
     return names, ranks, divs, ids
 
+
 def display_menu(user):
     print(f"\n Fleet Manager (User: {user})")
     print("1 Add crew member")
@@ -17,19 +18,18 @@ def display_menu(user):
     print("8 Count officers")
     print("9 Exit")
     return input("Choice: ")
- 
+
+
 def add_a_crew_member(names, ranks, divs, ids):
     name = input("Name: ")
     rank = input("Rank: ")
     div = input("Division: ")
 
-    user_input = input("ID: ")
-
-    if not user_input.isdigit(): # this keeps the correct formatt.e.g a number
+    try:
+        new_id = int(input("ID: "))
+    except ValueError:
         print("Invalid ID!")
         return
-
-    new_id = int(user_input)
 
     if new_id not in ids:
         names.append(name)
@@ -41,14 +41,12 @@ def add_a_crew_member(names, ranks, divs, ids):
         print("ID already exists!")
 
 
-ef remove_member(names, ranks, divs, ids):
-    user_input = input("ID to remove: ")
-
-    if not user_input.isdigit():
+def remove_member(names, ranks, divs, ids):
+    try:
+        remove_id = int(input("ID to remove: "))
+    except ValueError:
         print("Invalid ID!")
         return
-
-    remove_id = int(user_input)
 
     if remove_id in ids:
         index = ids.index(remove_id)
@@ -60,7 +58,6 @@ ef remove_member(names, ranks, divs, ids):
     else:
         print("ID not found!")
 
-  
 
 def update_ranks(name,rank,id):
   search_id = int(input("Id update: "))
@@ -71,11 +68,13 @@ def update_ranks(name,rank,id):
   else:
     print("Id not found")
 
+
 def display_roster(names, ranks, divs, ids):
     print("\n--- Roster ")
     for i in range(len(names)):
         print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
     print()
+
 
 def search_crew(names, ranks, divs, ids):
     search = input("Look for name: ").lower()
@@ -84,17 +83,18 @@ def search_crew(names, ranks, divs, ids):
         if search in names[i].lower():
             print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
     print()
-  
+
+
 def filter_by_division(names, divs):
     division = input("Enter division (Command / Operations / Sciences): ").strip().lower()
     print()
 
-    if division == "command":# what the user could type
-        target = "Command" # this is the correct version stored in the list
+    if division == "command":
+        target = "Command"
     elif division == "operations":
         target = "Operations"
     elif division == "sciences":
-        target = "Sciences" # target allows me to convert a bad input into the correctt format
+        target = "Sciences"
     else:
         print("Invalid division.")
         return
@@ -104,6 +104,7 @@ def filter_by_division(names, divs):
             print(name)
 
     print()
+
 
 
 def calculating_payroll(ranks):
@@ -116,8 +117,10 @@ def calculating_payroll(ranks):
     }
     return sum(pay.get(rank, 0) for rank in ranks)
 
+
 def counting_officers(ranks):
     return sum(rank in {"Captain", "Commander"} for rank in ranks)
+
 
 def main():
     user = input("Enter your name: ")

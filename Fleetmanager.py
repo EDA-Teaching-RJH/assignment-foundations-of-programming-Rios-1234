@@ -70,7 +70,7 @@ def update_ranks(name,rank,id):
 
 
 def display_roster(names, ranks, divs, ids):
-    print("\n--- Roster ")
+    print("\nRoster ")
     for i in range(len(names)):
         print(f"{ids[i]} | {names[i]} | {ranks[i]} | {divs[i]}")
     print()
